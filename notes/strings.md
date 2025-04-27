@@ -143,3 +143,96 @@ Python can use comparison [operators](./operators.md) to compare the contents of
 | >	| Greater than |	Returns True is the left string comes lexically after the right string. |
 | <= |	Less than or equal to |	Returns True if the left string is equal to or lexically prior to the right string. |
 | >= |	Greater than or equal to |	Returns True if the left string is equal to or comes lexically after the right string. |
+
+## Built-in String Methods
+Python has a number of built-in string methods that manipulate strings. However, when these methods are called, the original string will not be changed, so any modifications will need to be saved to a new variable. A few useful built-in string methods are listed below.
+
+### Strings
+`.capitalize()`
+Takes in a string, and returns a copy of the string in capital case.
+`.casefold()`
+Returns a copy of the string with all characters in lowercase.
+`.center()`
+Returns a new string with the specified padding.
+`.count()`
+Finds the number of times the specified substring occurs within a given string.
+`.encode()`
+Encodes a given string.
+`.endswith()`
+Checks whether or not a string ends with a given value.
+`.find()`
+Takes in a substring (and optionally start/end index), return the index number of the first occurrence of the substring inside a string.
+`.format()`
+Returns a string with values inserted via placeholders.
+`.format_map()`
+Returns the values from a given dictionary.
+`.index()`
+Searches through a string variable for the occurrence of a pattern or a substring.
+`.isalnum()`
+Returns True if all the characters in a given string are alphanumeric.
+`.isalpha()`
+Returns True if all characters in a string are letters of the alphabet, otherwise it returns False.
+`.isascii()`
+Returns True if all characters in a string are ASCII characters; otherwise, it returns False.
+`.isdecimal()`
+Checks whether a string consists of only decimal characters.
+`.isdigit()`
+Checks if all the elements in the string are digits and returns a boolean flag based on the result.
+`.isidentifier()`
+Takes in a string and returns True if the string is a valid Python identifier, else returns False.
+`.islower()`
+Takes in a string and returns True if all the letters in the string are in lowercase, else returns False. Ignores spaces, newlines, numeric and special characters in the string.
+`.isnumeric()`
+Verifies that all the characters within the string variable are numeric.
+`.isprintable()`
+Returns True if all characters in the string are printable or the string is empty, otherwise False if any character in the string is nonprintable.
+`.isspace()`
+Checks if all the characters in a string are whitespace characters.
+`.istitle()`
+Checks if a given string is in title case.
+`.isupper()`
+Takes in a string and returns True if all the letters in the string are in uppercase, else returns False. Ignores spaces, newlines, numeric and special characters in the string.
+`.join()`
+Concatenates all items from an iterable into a single string.
+`.ljust()`
+Left-aligns a string with a specified fill character
+`.lower()`
+Takes a string, and returns a copy of that string in which all letters are lowercase. Numbers and symbols are not changed.
+`.lstrip()`
+Removes leading characters from a string.
+`.partition()`
+Searches a string for a given keyword and splits that string into a three part tuple.
+`.replace()`
+Replace a specific substring with another substring.
+`.rfind()`
+Finds the last occurrence of a specified substring and returns the starting index.
+`.rindex()`
+Locates the highest index of the substring within a string variable.
+`.rjust()`
+Adds padding to the left of the given string.
+`.rpartition()`
+Used to split a string into three parts based on a specified separator.
+`.rsplit()`
+Splits a string into a list of substrings from the right end of the string based on a specified delimiter.
+`.rstrip()`
+Removes trailing characters from a string.
+`.split()`
+Breaks down a string into a list of substrings based on a specified separator.
+`.splitlines()`
+Used to split a multi-line string into a list of lines.
+`.startswith()`
+Checks whether a string starts with a specified value.
+`.strip()`
+Removes leading and trailing whitespace or specified characters from a string
+`.swapcase()`
+Takes a string and returns a copy of that string in which all lowercase letters are uppercase, and all uppercase letters are lowercase. Numbers and symbols are not changed.
+`.title()`
+Takes in a string and returns a copy of the string formatted in the title case: each word in the string is capitalized.
+`.translate()`
+Replaces characters in a string based on a mapping table.
+`.upper()`
+Takes a string, and returns a copy of that string in which all letters are uppercase. Numbers and symbols are not changed.
+`.zfill()`
+Returns a string with zeros padding the left side based on the integer given.
+`maketrans()`
+Returns a transition table based on the given strings.
