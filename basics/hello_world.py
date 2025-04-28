@@ -26,3 +26,10 @@ meal = "Dinner"
 # Printing out dinner
 print("Dinner:")
 print(meal)
+
+# Define the release and runtime integer variables below:
+release_year = 2023
+runtime = 175
+
+# Define the rating_out_of_10 float variable below: 
+rating_out_of_10 = 5.5
