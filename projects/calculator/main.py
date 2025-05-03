@@ -1,4 +1,4 @@
-"""A simple calculator class to perform basic arithmetic operations."""
+"""A simple calculator class to perform basic arithmetic operations interactively."""
 
 class Calculator:
     """A simple calculator class to perform basic arithmetic operations."""
@@ -7,58 +7,93 @@ class Calculator:
         """Initialize the calculator with a result attribute."""
         self.result = 0
 
-    def validate_list(self, numbers):
-        """Check if all elements are int or float."""
-        return all(isinstance(num, (int, float)) for num in numbers)
-
     def add(self, numbers):
-        """Add a list of numbers."""
-        if self.validate_list(numbers):
-            self.result = sum(numbers)
-            return self.result
-        raise ValueError("Invalid input. Please provide a list of numbers (int or float only).")
+        """Add a list of numbers.
+        
+        Primary method: using built-in sum().
+        
+        Alternative method:
+            result = 0
+            for num in numbers:
+                result += num
+            return result
+        """
+        return sum(numbers)
 
     def subtract(self, numbers):
-        """Subtract numbers from the first element."""
-        if self.validate_list(numbers):
-            self.result = numbers[0]
-            for num in numbers[1:]:
-                self.result -= num
-            return self.result
-        raise ValueError("Invalid input. Please provide a list of numbers (int or float only).")
+        """Subtract numbers sequentially from the first number."""
+        result = numbers[0]
+        for num in numbers[1:]:
+            result -= num
+        return result
 
     def multiply(self, numbers):
-        """Multiply a list of numbers."""
-        if self.validate_list(numbers):
-            self.result = 1
-            for num in numbers:
-                self.result *= num
-            return self.result
-        raise ValueError("Invalid input. Please provide a list of numbers (int or float only).")
+        """Multiply a list of numbers.
+        
+        Alternative method: use math.prod(numbers) (Python 3.8+).
+        """
+        result = 1
+        for num in numbers:
+            if not isinstance(num, (int, float)):
+                raise ValueError("Invalid input. Only integers or floats are allowed.")
+            result *= num
+        return result
 
     def divide(self, numbers):
         """Divide numbers sequentially."""
-        if self.validate_list(numbers):
-            if 0 in numbers[1:]:
-                raise ZeroDivisionError("Division by zero is not allowed.")
-            self.result = numbers[0]
+        result = numbers[0]
+        try:
             for num in numbers[1:]:
-                self.result /= num
-            return self.result
-        raise ValueError("Invalid input. Please provide a list of numbers (int or float only).")
+                result /= num
+            return result
+        except ZeroDivisionError:
+            print("Error: Division by zero is not allowed.")
+            return None
 
     def clear(self):
-        """Reset the calculator result."""
+        """Reset the calculator result to zero."""
         self.result = 0
         return self.result
 
-if __name__ == "__main__":
-    calc = Calculator()
+def get_numbers():
+    """Prompt user to enter numbers separated by spaces and return as a list."""
+    while True:
+        try:
+            numbers = list(map(float, input("Enter numbers separated by spaces: ").split()))
+            if not numbers:
+                raise ValueError
+            return numbers
+        except ValueError:
+            print("Invalid input. Please enter valid numbers.")
 
-    try:
-        print(calc.add([1, 2, 3, 4, 5]))
-        print(calc.subtract([10, 2, 3]))
-        print(calc.multiply([2, 3, 4]))
-        print(calc.divide([10, 2, 5]))
-    except (ValueError, ZeroDivisionError) as e:
-        print(e)
+def main():
+    """Main interactive loop."""
+    calculator = Calculator()
+
+    operations = {
+        "add": calculator.add,
+        "subtract": calculator.subtract,
+        "multiply": calculator.multiply,
+        "divide": calculator.divide,
+    }
+
+    print("Welcome to the Interactive Calculator!")
+    print("Available operations: add, subtract, multiply, divide")
+    print("Type 'exit' to quit.")
+
+    while True:
+        choice = input("\nChoose an operation: ").lower()
+
+        if choice == "exit":
+            print("Goodbye!")
+            break
+        elif choice in operations:
+            numbers = get_numbers()
+            result = operations[choice](numbers)
+            if result is not None:
+                print(f"Result: {result}")
+        else:
+            print("Invalid operation. Please choose from: add, subtract, multiply, divide.")
+
+if __name__ == "__main__":
+    main()
