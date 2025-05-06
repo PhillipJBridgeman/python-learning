@@ -1,22 +1,22 @@
 # Data Types
-Python is a strongly typed language, in the sense that at runtime it prevents typing errors and it engages in little implicit type conversion or casting, i.e. converting one type to another without a specific call to a conversion function.
+Python is a strongly typed language, in the sense that at runtime it prevents typing errors and it engages in little implicit type conversion or [casting](./casting.md), i.e. converting one type to another without a specific call to a conversion function.
 
 ```py
 codecademy = 575
 codecademy = "575 broadway"
 ```
 
-After line 1, codecademy is an int. After line 2, codecademy is a str.
+After line 1, `codecademy` is an `int`. After line 2, `codecademy` is a `str`.
 
 Python includes the following categories of built-in data types:
 
-- String type: str
-- Boolean type: bool
-- Binary types: bytes, bytearray, memoryview
-- Number types: int, float, complex
-- Sequence Types: list, range, tuple
-- Set types: set, frozenset
-- Dictionary type: dict
+- String type: `str`
+- Boolean type: `bool`
+- Binary types: `bytes`, `bytearray`, `memoryview`
+- Number types: `int`, `float`, `complex`
+- Sequence Types: `list`, `range`, `tuple`
+- Set types: set, `frozenset`
+- Dictionary type: `dict`
 
 ## type()
 The `type()` function can be used to retrieve the data type of an object:

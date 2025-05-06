@@ -1,7 +1,7 @@
 # Classes
 **Classes** are templates used to define the properties and methods of objects in code. They can describe the kinds of data that the class holds, and also how a programmer interacts with that data.
 
-The usage of classes are a key element of [object-oriented programming (OOP)](./general_topics/oop.md) where “class instances” are created to implement design principles such as [inheritance](./general_topics/inheritance.md) and [encapsulation](./general_topics/encapulation.md).
+The usage of classes are a key element of [object-oriented programming (OOP)](./general_topics/oop.md) where “class instances” are created to implement design principles such as [inheritance](../../general_topics/programming_paradigms/inheritance.md) and [encapsulation](../../general_topics/programming_paradigms/polymorphism.md).
 
 ## Creating a Class
 In Python, classes are defined using the **class** keyword. The first letter of the name of the class is always capitalized. For instance, the first letter of the `Home` class in the below example, i.e., ‘H’, is capitalized: 
@@ -27,7 +27,7 @@ Objects can be created or instantiated from classes. These objects are known as 
 ```py
 my_home = Home()
 ```
-Here, the instance name is my_home, which derives from the Home class. Calling this line implicitly calls the Home class’s `__init__()` method.
+Here, the instance name is `my_home`, which derives from the `Home` class. Calling this line implicitly calls the Home class’s [`__init__()`](./dunder_methods/init_method.md) method.
 
 ## Attributes
 Class attributes are variables that are defined outside of all methods and have the same value for every instance of the class. They also can be accessed via the class name rather than the instance name. Setting the variable via the class name will change it for all instances.

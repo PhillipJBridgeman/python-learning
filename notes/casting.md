@@ -22,9 +22,9 @@ Since the expression above represents the sum of two float values, the data type
 ## Explicit Type Conversion
 Explicit type casting involves Python’s predefined functions that act as a constructor of another data type:
 
-- The str() function takes an integer or float as an argument and converts it to a string.
-- The int() function takes a string or float as an argument converts it to an integer.
-- The float() function takes an integer or string as an argument and converts it to a float.
+- The `str()` function takes an integer or float as an argument and converts it to a string.
+- The [`int() function`](./built-in_functions/int.md) takes a string or float as an argument converts it to an integer.
+- The [`float() function`] takes an integer or string as an argument and converts it to a float.
 
 Common functions:
 | Function | Description | Example |
@@ -39,4 +39,4 @@ When operating on data, it is important to be mindful of the data types associat
 num = float(input("Please enter a number: "))
 print(num ** 2)
 ```
-The [`input()` function](./functions/input.md) takes input from the user and stores it in a variable as a string. However, the ** operator takes two numbers and returns the first number to the power of the second. In order to make the code work, the input variable must be cast to a number type.
+The [`input()` function](./built-in_functions/input.md) takes input from the user and stores it in a variable as a string. However, the ** operator takes two numbers and returns the first number to the power of the second. In order to make the code work, the input variable must be cast to a number type.
