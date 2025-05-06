@@ -4,7 +4,7 @@ The **`binascii`** module contains a number of methods to convert between binary
 The following functions are provided by the `binascii` module:
 
 ## Binascii Module
-`.a2b_uu()`
+[`.a2b_uu()`](./binascii_module/a2b_uu.md)
 Returns a new object containing the decoded binary data from ASCII-encoded data in the UUEncode format.
-`.b2a_uu()`
+[`.b2a_uu()`](./binascii_module/b2a_uu.md)
 Converts binary data into a bytes object containing a string of ASCII characters in UUEncoded format.

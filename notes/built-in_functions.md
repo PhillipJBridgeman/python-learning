@@ -21,9 +21,9 @@ The output of the above code is as follows:
 ```
 
 ## Built-in Functions
-`.format()`
+[`.format()`](./built-in_functions/format.md)
 Used to format different types of objects into strings.
-`abs()`
+[`abs()`](./built-in_functions/abs.md)
 Returns the absolute value of a numeric argument.
 `all()`
 Returns True if every item in an iterable evaluates to True, otherwise, it returns False.
